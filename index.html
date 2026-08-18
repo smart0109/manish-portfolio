@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manish · Chief Revenue Officer, Basis Vectors Capital</title>
+<style>
+  :root{
+    --ink:#131a2b;
+    --ink-soft:#4a5468;
+    --bg:#f6f7f9;
+    --card:#ffffff;
+    --line:#e6e8ee;
+    --navy:#0f1730;
+    --accent:#c8862b;
+    --accent-soft:#f4e3c8;
+    --teal:#0f9b8e;
+    --radius:14px;
+    --shadow:0 8px 28px rgba(19,26,43,0.08);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.55;
+  }
+  a{color:inherit;}
+  img{display:block;max-width:100%;}
+
+  /* NAV */
+  header.nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(246,247,249,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    max-width:1100px; margin:0 auto; padding:16px 24px;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .brand{font-weight:700; letter-spacing:0.3px; font-size:17px; color:var(--navy);}
+  .brand span{color:var(--accent);}
+  nav.links{display:flex; gap:28px;}
+  nav.links a{
+    font-size:14px; font-weight:600; color:var(--ink-soft); text-decoration:none;
+    transition:color .15s;
+  }
+  nav.links a:hover{color:var(--accent);}
+  .nav-cta{
+    font-size:13px; font-weight:700; padding:9px 16px; border-radius:999px;
+    background:var(--navy); color:#fff; text-decoration:none; white-space:nowrap;
+  }
+  @media (max-width:720px){ nav.links{display:none;} }
+
+  /* HERO */
+  .hero{
+    max-width:1100px; margin:0 auto; padding:72px 24px 56px;
+    display:grid; grid-template-columns:auto 1fr; gap:44px; align-items:center;
+  }
+  @media (max-width:720px){ .hero{grid-template-columns:1fr; text-align:center; padding-top:44px;} }
+  .avatar-wrap{
+    width:172px; height:172px; border-radius:50%;
+    padding:5px; background:linear-gradient(135deg, var(--accent), var(--teal));
+    justify-self:center;
+  }
+  .avatar-wrap img{
+    width:100%; height:100%; border-radius:50%; object-fit:cover; border:4px solid #fff;
+  }
+  .eyebrow{
+    display:inline-block; font-size:12px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase;
+    color:var(--teal); background:#e6f5f3; padding:6px 12px; border-radius:999px; margin-bottom:14px;
+  }
+  h1.hero-name{font-size:40px; margin:0 0 6px; color:var(--navy); font-weight:800; letter-spacing:-0.5px;}
+  .hero-title{font-size:18px; font-weight:600; color:var(--accent); margin:0 0 16px;}
+  .hero-desc{font-size:16px; color:var(--ink-soft); max-width:560px; margin:0 0 24px;}
+  @media (max-width:720px){ .hero-desc{margin-left:auto; margin-right:auto;} }
+  .hero-ctas{display:flex; gap:12px; flex-wrap:wrap;}
+  @media (max-width:720px){ .hero-ctas{justify-content:center;} }
+  .btn{
+    display:inline-flex; align-items:center; gap:8px; font-size:14px; font-weight:700;
+    padding:12px 20px; border-radius:10px; text-decoration:none; border:1px solid transparent;
+    transition:transform .12s, box-shadow .12s;
+  }
+  .btn:hover{transform:translateY(-1px);}
+  .btn-primary{background:var(--navy); color:#fff; box-shadow:var(--shadow);}
+  .btn-ghost{background:#fff; color:var(--navy); border-color:var(--line);}
+
+  /* company chips row under hero */
+  .company-strip{
+    max-width:1100px; margin:0 auto 8px; padding:0 24px 40px;
+    display:flex; gap:14px; flex-wrap:wrap; align-items:center; justify-content:center;
+  }
+  .company-chip{
+    font-size:12.5px; font-weight:700; color:var(--ink-soft);
+    background:#fff; border:1px solid var(--line); padding:8px 14px; border-radius:999px;
+  }
+
+  section{max-width:1100px; margin:0 auto; padding:64px 24px;}
+  section.tinted{background:#fff; border-top:1px solid var(--line); border-bottom:1px solid var(--line); max-width:none; padding:64px 0;}
+  section.tinted > .inner{max-width:1100px; margin:0 auto; padding:0 24px;}
+
+  .section-head{margin-bottom:36px; max-width:680px;}
+  .section-kicker{font-size:12px; font-weight:700; letter-spacing:1.4px; text-transform:uppercase; color:var(--accent); margin:0 0 8px;}
+  .section-title{font-size:28px; font-weight:800; color:var(--navy); margin:0 0 10px; letter-spacing:-0.3px;}
+  .section-sub{font-size:15.5px; color:var(--ink-soft); margin:0;}
+
+  /* ABOUT */
+  .about-grid{display:grid; grid-template-columns:1.3fr 1fr; gap:40px; align-items:start;}
+  @media (max-width:800px){ .about-grid{grid-template-columns:1fr;} }
+  .about-text p{font-size:15.5px; color:var(--ink-soft); margin:0 0 16px;}
+  .about-fact-card{
+    background:var(--bg); border:1px solid var(--line); border-radius:var(--radius);
+    padding:22px 24px;
+  }
+  .fact-row{display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid var(--line); font-size:14px;}
+  .fact-row:last-child{border-bottom:none;}
+  .fact-label{color:var(--ink-soft); font-weight:600;}
+  .fact-value{color:var(--navy); font-weight:700; text-align:right;}
+
+  /* EXPERTISE */
+  .expertise-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:18px;
+  }
+  @media (max-width:800px){ .expertise-grid{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:480px){ .expertise-grid{grid-template-columns:1fr;} }
+  .expertise-card{
+    background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+    padding:22px; box-shadow:var(--shadow);
+  }
+  .expertise-icon{
+    width:38px; height:38px; border-radius:10px; background:var(--accent-soft); color:var(--accent);
+    display:flex; align-items:center; justify-content:center; font-size:18px; margin-bottom:14px; font-weight:800;
+  }
+  .expertise-card h3{font-size:15.5px; margin:0 0 6px; color:var(--navy);}
+  .expertise-card p{font-size:13.5px; color:var(--ink-soft); margin:0;}
+
+  /* SYSTEMS BUILT */
+  .systems-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:22px;}
+  @media (max-width:800px){ .systems-grid{grid-template-columns:1fr;} }
+  .system-card{
+    background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+    padding:26px 26px 24px; box-shadow:var(--shadow); display:flex; flex-direction:column;
+  }
+  .system-top{display:flex; align-items:center; gap:14px; margin-bottom:14px;}
+  .system-icon{
+    width:44px; height:44px; border-radius:12px; flex:none;
+    display:flex; align-items:center; justify-content:center; font-size:20px; font-weight:800; color:#fff;
+  }
+  .system-name{font-size:17px; font-weight:800; color:var(--navy); margin:0;}
+  .system-sub{font-size:12px; font-weight:700; color:var(--teal); text-transform:uppercase; letter-spacing:0.5px; margin:2px 0 0;}
+  .system-desc{font-size:14px; color:var(--ink-soft); margin:0 0 16px;}
+  .system-impact{list-style:none; margin:0 0 16px; padding:0; display:flex; flex-direction:column; gap:8px;}
+  .system-impact li{font-size:13.5px; color:var(--ink); padding-left:20px; position:relative;}
+  .system-impact li:before{content:"→"; position:absolute; left:0; color:var(--accent); font-weight:800;}
+  .system-tags{display:flex; flex-wrap:wrap; gap:6px; margin-top:auto; padding-top:14px; border-top:1px solid var(--line);}
+  .system-tag{font-size:11px; font-weight:700; color:var(--ink-soft); background:var(--bg); border:1px solid var(--line); padding:4px 9px; border-radius:6px;}
+  .system-note{
+    border:1.5px dashed var(--line); border-radius:12px; padding:14px 16px; color:var(--ink-soft);
+    font-size:12.5px; margin-top:16px; background:var(--bg);
+  }
+  .callout-bar{
+    background:var(--navy); color:#fff; border-radius:var(--radius); padding:22px 28px;
+    font-size:15px; font-weight:600; margin-bottom:36px; text-align:center;
+  }
+  .callout-bar span{color:var(--accent);}
+
+  /* TECHNOLOGY */
+  .tech-groups{display:flex; flex-direction:column; gap:22px;}
+  .tech-group-label{font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.6px; color:var(--ink-soft); margin-bottom:10px;}
+  .tech-pills{display:flex; flex-wrap:wrap; gap:8px;}
+  .tech-pill{
+    font-size:13px; font-weight:700; color:var(--navy); background:#fff; border:1px solid var(--line);
+    padding:8px 14px; border-radius:999px;
+  }
+
+  /* PORTFOLIO / PRODUCTS */
+  .portfolio-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:26px;}
+  @media (max-width:800px){ .portfolio-grid{grid-template-columns:1fr;} }
+  .product-card{
+    background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+    overflow:hidden; box-shadow:var(--shadow); display:flex; flex-direction:column;
+  }
+  .mockup{
+    aspect-ratio:16/10; position:relative; overflow:hidden;
+    background:linear-gradient(135deg, var(--mockup-a,#0f1730), var(--mockup-b,#0f9b8e));
+    padding:0;
+  }
+  .mockup .browser-bar{
+    height:26px; background:rgba(255,255,255,0.14); display:flex; align-items:center; gap:6px; padding:0 10px;
+  }
+  .browser-bar .dot{width:7px; height:7px; border-radius:50%; background:rgba(255,255,255,0.55);}
+  .mockup-body{
+    position:absolute; inset:26px 0 0 0; padding:18px 22px; color:#fff;
+  }
+  .mockup-tag{
+    font-size:10.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase;
+    background:rgba(255,255,255,0.16); display:inline-block; padding:4px 9px; border-radius:6px; margin-bottom:10px;
+  }
+  .mockup-headline{font-size:17px; font-weight:800; margin:0 0 6px; max-width:80%;}
+  .mockup-sub{font-size:12px; opacity:0.85; max-width:75%; margin:0 0 16px;}
+  .mockup-bars{display:flex; flex-direction:column; gap:7px; max-width:60%;}
+  .mockup-bars div{height:6px; border-radius:4px; background:rgba(255,255,255,0.28);}
+  .mockup-badge{
+    position:absolute; bottom:14px; right:16px; font-size:10px; font-weight:800; letter-spacing:0.5px;
+    background:rgba(255,255,255,0.9); color:#111; padding:4px 9px; border-radius:6px; text-transform:uppercase;
+  }
+  .product-body{padding:22px 24px 24px; flex:1; display:flex; flex-direction:column;}
+  .product-name{font-size:17px; font-weight:800; color:var(--navy); margin:0 0 2px;}
+  .product-domain{font-size:12.5px; color:var(--teal); font-weight:700; margin:0 0 12px;}
+  .product-desc{font-size:14px; color:var(--ink-soft); margin:0 0 16px;}
+  .ebitda-stat{
+    display:inline-flex; align-items:center; gap:6px; font-size:12.5px; font-weight:800; color:var(--navy);
+    background:var(--accent-soft); border-radius:8px; padding:6px 12px; margin:0 0 14px;
+  }
+  .ebitda-stat .dot{width:6px; height:6px; border-radius:50%; background:var(--accent);}
+  .product-impact{list-style:none; margin:0 0 4px; padding:0; display:flex; flex-direction:column; gap:8px;}
+  .product-impact li{font-size:13.5px; color:var(--ink); padding-left:20px; position:relative;}
+  .product-impact li:before{content:"→"; position:absolute; left:0; color:var(--accent); font-weight:800;}
+
+  /* TIMELINE */
+  .timeline{position:relative; padding-left:28px; border-left:2px solid var(--line);}
+  .tl-item{position:relative; padding-bottom:32px;}
+  .tl-item:last-child{padding-bottom:0;}
+  .tl-dot{
+    position:absolute; left:-35px; top:2px; width:14px; height:14px; border-radius:50%;
+    background:var(--accent); border:3px solid var(--bg);
+  }
+  .tl-item.current .tl-dot{background:var(--teal);}
+  .tl-period{font-size:12px; font-weight:700; color:var(--ink-soft); text-transform:uppercase; letter-spacing:0.6px; margin-bottom:4px;}
+  .tl-role{font-size:16px; font-weight:800; color:var(--navy); margin:0 0 4px;}
+  .tl-desc{font-size:14px; color:var(--ink-soft); margin:0; max-width:640px;}
+  .tl-placeholder{
+    border:1.5px dashed var(--line); border-radius:12px; padding:18px 20px; color:var(--ink-soft);
+    font-size:13.5px; background:#fff;
+  }
+  .tl-placeholder strong{color:var(--navy);}
+
+  /* CONTACT */
+  .contact-box{
+    background:var(--navy); border-radius:20px; padding:52px 44px; color:#fff;
+    display:flex; justify-content:space-between; align-items:center; gap:24px; flex-wrap:wrap;
+  }
+  .contact-box h2{font-size:26px; margin:0 0 8px; font-weight:800;}
+  .contact-box p{margin:0; color:rgba(255,255,255,0.75); font-size:14.5px; max-width:440px;}
+  .contact-actions{display:flex; gap:12px; flex-wrap:wrap;}
+  .btn-light{background:#fff; color:var(--navy);}
+  .btn-outline{background:transparent; color:#fff; border-color:rgba(255,255,255,0.35);}
+
+  footer{
+    text-align:center; padding:36px 24px 48px; color:var(--ink-soft); font-size:12.5px;
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <div class="brand">MANISH <span>/</span> CRO Portfolio</div>
+    <nav class="links">
+      <a href="#about">About</a>
+      <a href="#systems">Systems Built</a>
+      <a href="#technology">Technology</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#timeline">Career</a>
+    </nav>
+    <a class="nav-cta" href="#contact">Contact</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="avatar-wrap">
+    <img src="data:image/jpeg;base64,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" alt="Manish">
+  </div>
+  <div>
+    <span class="eyebrow">Chief Revenue Officer · Basis Vectors Capital</span>
+    <h1 class="hero-name">Manish</h1>
+    <p class="hero-title">A CRO who builds the revenue infrastructure himself, not just directs it</p>
+    <p class="hero-desc">
+      I run sales, account management, GTM, product, and marketing across a portfolio of B2B and healthcare
+      software companies, and I build the AI systems that power the revenue engine: a prospect operations
+      platform, an outbound engine, and an AI meeting copilot. That is normally the work of a VP RevOps, a
+      Head of Data, and a marketing ops team. I do it solo.
+    </p>
+    <p style="font-size:12.5px; font-weight:700; color:var(--ink-soft); letter-spacing:0.3px; margin:-8px 0 20px;">
+      MBA &nbsp;·&nbsp; Anthropic Architect &nbsp;·&nbsp; MIT Certified in AI &nbsp;·&nbsp; PMP
+    </p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="mailto:manish696@gmail.com">Email Me</a>
+      <a class="btn btn-ghost" href="https://linkedin.com/in/manish-agarwal-mani" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn btn-ghost" href="#systems">See What I've Built</a>
+    </div>
+  </div>
+</section>
+
+<div class="company-strip">
+  <span class="company-chip">Cadient · AI Talent &amp; HR</span>
+  <span class="company-chip">Vorro · Healthcare Data</span>
+  <span class="company-chip">RevEngineer · B2B Revenue Intel</span>
+  <span class="company-chip">CV3 · DTC Ecommerce</span>
+</div>
+
+<section id="about" class="tinted">
+  <div class="inner">
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="section-kicker">About</p>
+        <h2 class="section-title" style="margin-bottom:18px;">Operator who builds, not just directs</h2>
+        <p>
+          I'm the Chief Revenue Officer at Basis Vectors Capital, a private equity firm. My role covers
+          revenue leadership across the firm's portfolio: sales, account management, go-to-market strategy,
+          product direction, marketing, and operational turnaround, applied to whatever each company needs
+          most.
+        </p>
+        <p>
+          I build the infrastructure myself rather than delegate it to a RevOps team: a CRM and prospect
+          operations platform (Command Center), an AI-driven outbound engine, and a personal AI meeting
+          copilot (Second Brain). All designed, coded, and operated by me, doing work that typically
+          requires several department-head hires.
+        </p>
+        <p>
+          With 20 years in consulting, I unblock stalled C-suite conversations by taking a holistic view of
+          the business: what the business itself needs, the technical debt and consolidation priorities
+          facing the CTO, and the budget requirements driving the CFO.
+        </p>
+      </div>
+      <div class="about-fact-card">
+        <div class="fact-row"><span class="fact-label">Role</span><span class="fact-value">Chief Revenue Officer, Basis Vectors Capital</span></div>
+        <div class="fact-row"><span class="fact-label">Experience</span><span class="fact-value">20+ years of full P&amp;L ownership</span></div>
+        <div class="fact-row"><span class="fact-label">Portfolio</span><span class="fact-value">$7.4M ARR · 65+ clients · 217 employees</span></div>
+        <div class="fact-row"><span class="fact-label">EBITDA Impact</span><span class="fact-value">Up to 25% margin, 3x scale</span></div>
+        <div class="fact-row"><span class="fact-label">Built Solo</span><span class="fact-value">5 production AI systems</span></div>
+        <div class="fact-row"><span class="fact-label">Contact</span><span class="fact-value">manish696@gmail.com</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="systems">
+  <div class="section-head">
+    <p class="section-kicker">Systems Built</p>
+    <h2 class="section-title">What I've built, from scratch</h2>
+    <p class="section-sub">
+      I don't outsource the infrastructure. These are production systems I personally designed, coded,
+      and operate. They run the revenue and GTM engine end to end.
+    </p>
+  </div>
+
+  <div class="callout-bar">
+    Functions typically split across a <span>VP RevOps</span>, a <span>Head of Data</span>, and a
+    <span>Marketing Ops team</span>, built and run by one person.
+  </div>
+
+  <div class="systems-grid">
+
+    <div class="system-card">
+      <div class="system-top">
+        <div class="system-icon" style="background:#2952e3;">CC</div>
+        <div>
+          <p class="system-name">Command Center</p>
+          <p class="system-sub">Multi-brand prospect operations platform</p>
+        </div>
+      </div>
+      <p class="system-desc">
+        A CRM-grade operations platform running all four portfolio companies (Cadient, Vorro, CV3,
+        RevEngineer) on one system, built on a REST API with a MongoDB backend. Serves every prospect,
+        message, and asset across the business.
+      </p>
+      <ul class="system-impact">
+        <li>ICP scoring engine that tiers every prospect (A/B/C/DQ) and drives campaign targeting</li>
+        <li>Bulk operations pipeline that updates thousands of records per run across brands</li>
+        <li>Per-brand data partitioning, asset linking (case studies, videos, one-pagers), audit trail</li>
+      </ul>
+      <div class="system-tags">
+        <span class="system-tag">Python</span><span class="system-tag">MongoDB</span>
+        <span class="system-tag">REST API</span><span class="system-tag">SQLite / WAL</span>
+      </div>
+    </div>
+
+    <div class="system-card">
+      <div class="system-top">
+        <div class="system-icon" style="background:#0f9b8e;">OB</div>
+        <div>
+          <p class="system-name">Social Selling Outbound Engine</p>
+          <p class="system-sub">AI-driven prospecting &amp; outreach pipeline</p>
+        </div>
+      </div>
+      <p class="system-desc">
+        An end-to-end outbound system: find the right prospects, enrich them, score them, and message
+        them with AI-personalized, multi-stage campaigns. Compliance is built in, not bolted on.
+      </p>
+      <ul class="system-impact">
+        <li>5-actor LinkedIn intelligence stack: profile enrichment, ATS detection, activity signals, intent discovery, company data</li>
+        <li>4-step enrichment waterfall (email/contact resolution) that only pays for data no cache already has</li>
+        <li>GPT-4o/GPT-5-personalized 5-stage message sequences on a tested psychological framework, with an automated QA gate enforcing CAN-SPAM and suppression rules before anything sends</li>
+      </ul>
+      <div class="system-tags">
+        <span class="system-tag">Apify</span><span class="system-tag">OpenAI GPT-4o/GPT-5</span>
+        <span class="system-tag">Evaboot</span><span class="system-tag">Apollo.io</span>
+        <span class="system-tag">Gmail API</span>
+      </div>
+    </div>
+
+    <div class="system-card">
+      <div class="system-top">
+        <div class="system-icon" style="background:#c8862b;">SB</div>
+        <div>
+          <p class="system-name">Second Brain</p>
+          <p class="system-sub">AI meeting copilot &amp; personal knowledge system</p>
+        </div>
+      </div>
+      <p class="system-desc">
+        A hosted AI copilot that sits across my calendar, email, and CRM. It captures meeting context,
+        consolidates notes, and carries durable memory forward so nothing gets re-explained twice.
+      </p>
+      <ul class="system-impact">
+        <li>Google Calendar + Gmail integrated via OAuth for live meeting prep and follow-up</li>
+        <li>Zoho CRM integration keeps deal and contact context in sync automatically</li>
+        <li>Durable memory on hosted Postgres so context survives restarts and deploys, not just the session</li>
+      </ul>
+      <div class="system-tags">
+        <span class="system-tag">Render</span><span class="system-tag">Postgres (Neon / AWS)</span>
+        <span class="system-tag">Google OAuth</span><span class="system-tag">Zoho</span>
+      </div>
+    </div>
+
+    <div class="system-card">
+      <div class="system-top">
+        <div class="system-icon" style="background:#0e162d;">PN</div>
+        <div>
+          <p class="system-name">Partner Network</p>
+          <p class="system-sub">Channel &amp; strategic partnerships, built from scratch</p>
+        </div>
+      </div>
+      <p class="system-desc">
+        Built the partner and channel program from the ground up, including a strategic relationship with
+        Amazon. Turns integration and go-to-market partners into a real pipeline source, not a logo on a
+        slide.
+      </p>
+      <ul class="system-impact">
+        <li>Designed the partner/integration ecosystem now mapped across the portfolio companies</li>
+        <li>Built the process for sourcing, structuring, and activating strategic partnerships</li>
+      </ul>
+      <div class="system-note">
+        Exact scope of the Amazon relationship pending final copy from Manish. Placeholder framing above;
+        update with specifics before wide distribution.
+      </div>
+    </div>
+
+    <div class="system-card">
+      <div class="system-top">
+        <div class="system-icon" style="background:#4a5468;">IN</div>
+        <div>
+          <p class="system-name">Execution Infrastructure</p>
+          <p class="system-sub">The operating layer underneath everything above</p>
+        </div>
+      </div>
+      <p class="system-desc">
+        Every system above runs on infrastructure I also built: an orchestration layer coordinating work
+        across Windows, Linux (WSL2), and cloud agents, with automated recovery when jobs fail.
+      </p>
+      <ul class="system-impact">
+        <li>Job-queue architecture with atomic handoffs and real exit-code tracking, not best-effort polling</li>
+        <li>Self-healing watchers and scheduled infrastructure that recover from failures without manual restarts</li>
+      </ul>
+      <div class="system-tags">
+        <span class="system-tag">PowerShell</span><span class="system-tag">systemd</span>
+        <span class="system-tag">Windows Task Scheduler</span><span class="system-tag">WSL2</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="technology" class="tinted">
+  <div class="inner">
+    <div class="section-head">
+      <p class="section-kicker">Technology</p>
+      <h2 class="section-title">The stack behind it</h2>
+      <p class="section-sub">Every system above is real, running code, not slideware. This is what it's built on.</p>
+    </div>
+    <div class="tech-groups">
+      <div>
+        <p class="tech-group-label">AI / LLM</p>
+        <div class="tech-pills">
+          <span class="tech-pill">OpenAI GPT-4o &amp; GPT-5</span>
+          <span class="tech-pill">Google Gemini</span>
+          <span class="tech-pill">Groq (Llama)</span>
+        </div>
+      </div>
+      <div>
+        <p class="tech-group-label">Data &amp; Enrichment</p>
+        <div class="tech-pills">
+          <span class="tech-pill">Apify</span>
+          <span class="tech-pill">Evaboot</span>
+          <span class="tech-pill">Apollo.io</span>
+          <span class="tech-pill">MongoDB</span>
+          <span class="tech-pill">SQLite (WAL)</span>
+          <span class="tech-pill">Postgres (Neon / AWS)</span>
+        </div>
+      </div>
+      <div>
+        <p class="tech-group-label">Automation &amp; Infrastructure</p>
+        <div class="tech-pills">
+          <span class="tech-pill">Python</span>
+          <span class="tech-pill">Playwright</span>
+          <span class="tech-pill">WSL2 / Linux</span>
+          <span class="tech-pill">systemd</span>
+          <span class="tech-pill">PowerShell</span>
+          <span class="tech-pill">Windows Task Scheduler</span>
+        </div>
+      </div>
+      <div>
+        <p class="tech-group-label">Integrations &amp; Hosting</p>
+        <div class="tech-pills">
+          <span class="tech-pill">Gmail API</span>
+          <span class="tech-pill">Google OAuth / Calendar</span>
+          <span class="tech-pill">Zoho</span>
+          <span class="tech-pill">Render</span>
+          <span class="tech-pill">GitHub / GitHub Pages</span>
+          <span class="tech-pill">Next.js / React</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="expertise">
+  <div class="section-head">
+    <p class="section-kicker">Expertise</p>
+    <h2 class="section-title">Where I add the most value</h2>
+    <p class="section-sub">The recurring set of problems I get pulled in to solve across portfolio companies.</p>
+  </div>
+  <div class="expertise-grid">
+    <div class="expertise-card"><div class="expertise-icon">R</div><h3>Revenue Growth</h3><p>Building and scaling the full revenue motion (pipeline, pricing, and process) for B2B software companies.</p></div>
+    <div class="expertise-card"><div class="expertise-icon">G</div><h3>GTM Strategy</h3><p>Defining ICP, positioning, and channel strategy, then building the outbound and inbound engine to match.</p></div>
+    <div class="expertise-card"><div class="expertise-icon">P</div><h3>Product Direction</h3><p>Working directly with product teams to align the roadmap to what the market will actually pay for.</p></div>
+    <div class="expertise-card"><div class="expertise-icon">A</div><h3>Account Management</h3><p>Turning signed logos into expansion revenue through structured account management and renewal process.</p></div>
+    <div class="expertise-card"><div class="expertise-icon">M</div><h3>Marketing</h3><p>Standing up marketing function and messaging from scratch when a portfolio company doesn't have one yet.</p></div>
+    <div class="expertise-card"><div class="expertise-icon">T</div><h3>Turnaround</h3><p>Stepping into underperforming units to diagnose the real problem and rebuild the commercial engine.</p></div>
+    <div class="expertise-card"><div class="expertise-icon">C</div><h3>C-Suite Alignment</h3><p>Unblocking stalled executive conversations by taking a holistic view: business needs, the CTO's technical debt and consolidation priorities, and the CFO's budget requirements. Grounded in 20 years of consulting.</p></div>
+  </div>
+</section>
+
+<section id="portfolio" class="tinted">
+  <div class="inner">
+    <div class="section-head">
+      <p class="section-kicker">Portfolio Companies</p>
+      <h2 class="section-title">What I've built and run</h2>
+      <p class="section-sub">
+        Product screenshots below are placeholders. Swap in real product screens whenever you're ready.
+      </p>
+    </div>
+    <div class="portfolio-grid">
+
+      <div class="product-card">
+        <div class="mockup" style="--mockup-a:#0f1730; --mockup-b:#c8862b;">
+          <div class="browser-bar"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+          <div class="mockup-body">
+            <span class="mockup-tag">Talent OS</span>
+            <p class="mockup-headline">SmartHire Pipeline</p>
+            <p class="mockup-sub">AI-ranked candidates, live requisition board</p>
+            <div class="mockup-bars"><div style="width:100%;"></div><div style="width:75%;"></div><div style="width:55%;"></div></div>
+          </div>
+          <div class="mockup-badge">Screenshot Placeholder</div>
+        </div>
+        <div class="product-body">
+          <p class="product-name">Cadient · SmartSuite / SmartHire</p>
+          <p class="product-domain">AI Talent &amp; HR Optimization · CadientTalent.com</p>
+          <p class="product-desc">AI-driven hiring and workforce optimization platform for staffing and healthcare recruiting teams.</p>
+          <div class="ebitda-stat"><span class="dot"></span>EBITDA margin: 12% → 25% in under 9 months</div>
+          <ul class="product-impact">
+            <li>Own GTM strategy, pricing, and outbound revenue motion</li>
+            <li>Drive product-market fit conversations directly with buyers</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="mockup" style="--mockup-a:#0f1730; --mockup-b:#0f9b8e;">
+          <div class="browser-bar"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+          <div class="mockup-body">
+            <span class="mockup-tag">EiPaaS</span>
+            <p class="mockup-headline">BridgeGate Integration Hub</p>
+            <p class="mockup-sub">Real-time healthcare data pipelines</p>
+            <div class="mockup-bars"><div style="width:90%;"></div><div style="width:65%;"></div><div style="width:80%;"></div></div>
+          </div>
+          <div class="mockup-badge">Screenshot Placeholder</div>
+        </div>
+        <div class="product-body">
+          <p class="product-name">Vorro · BridgeGate EiPaaS</p>
+          <p class="product-domain">Healthcare Data Integration · Vorro.Net</p>
+          <p class="product-desc">Enterprise integration platform connecting payers, providers, and health systems on FHIR-based pipelines.</p>
+          <div class="ebitda-stat"><span class="dot"></span>Scaled 3x while holding a 47% EBITDA margin</div>
+          <ul class="product-impact">
+            <li>Lead revenue strategy for a complex, technical healthcare IT sale</li>
+            <li>Build sales assets that translate integration depth into buyer ROI</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="mockup" style="--mockup-a:#0f1730; --mockup-b:#2952e3;">
+          <div class="browser-bar"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+          <div class="mockup-body">
+            <span class="mockup-tag">Revenue Intel</span>
+            <p class="mockup-headline">RevEngineer Signal Feed</p>
+            <p class="mockup-sub">Buying-intent and account scoring dashboard</p>
+            <div class="mockup-bars"><div style="width:70%;"></div><div style="width:95%;"></div><div style="width:50%;"></div></div>
+          </div>
+          <div class="mockup-badge">Screenshot Placeholder</div>
+        </div>
+        <div class="product-body">
+          <p class="product-name">RevEngineer · RevEngineer.ai</p>
+          <p class="product-domain">B2B Revenue Intelligence &amp; GTM · revengineer.ai</p>
+          <p class="product-desc">Revenue intelligence and go-to-market tooling that helps B2B teams find and prioritize buying signals.</p>
+          <ul class="product-impact">
+            <li>Shape product direction around real GTM pain points</li>
+            <li>Drive positioning and outbound strategy from the ground up</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="mockup" style="--mockup-a:#0f1730; --mockup-b:#d62598;">
+          <div class="browser-bar"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+          <div class="mockup-body">
+            <span class="mockup-tag">DTC Commerce</span>
+            <p class="mockup-headline">CommerceV3 Storefront</p>
+            <p class="mockup-sub">Order, catalog, and fulfillment console</p>
+            <div class="mockup-bars"><div style="width:60%;"></div><div style="width:85%;"></div><div style="width:45%;"></div></div>
+          </div>
+          <div class="mockup-badge">Screenshot Placeholder</div>
+        </div>
+        <div class="product-body">
+          <p class="product-name">CV3 · CommerceV3</p>
+          <p class="product-domain">DTC Ecommerce Platform · commercev3.com</p>
+          <p class="product-desc">Ecommerce platform and services for direct-to-consumer brands managing catalog, orders, and fulfillment.</p>
+          <ul class="product-impact">
+            <li>Oversee revenue and account management across the customer base</li>
+            <li>Support turnaround initiatives to stabilize and grow the business</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="timeline">
+  <div class="section-head">
+    <p class="section-kicker">Career</p>
+    <h2 class="section-title">Career timeline</h2>
+    <p class="section-sub">20+ years of full P&amp;L ownership across healthcare IT, HR tech, banking, and enterprise software.</p>
+  </div>
+  <div class="timeline">
+    <div class="tl-item current">
+      <div class="tl-dot"></div>
+      <div class="tl-period">Jul 2025 to Present</div>
+      <p class="tl-role">Chief Revenue Officer · Basis Vectors Capital</p>
+      <p class="tl-desc">
+        Full operating ownership across four portfolio companies as a PE operating executive: marketing, sales,
+        GTM, product strategy, and turnaround, spanning $7.4M ARR, 65+ enterprise clients, and 217 employees.
+        Doubled Cadient's EBITDA margin from 12% to 25% in under nine months and scaled Vorro 3x while holding a
+        47% EBITDA margin.
+      </p>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-period">Jan 2024 to Jul 2025</div>
+      <p class="tl-role">Executive Education · MBA, PMP, MIT Applied AI</p>
+      <p class="tl-desc">
+        Full-time executive education between operating roles: MBA (Western Governors University, 2025), PMP
+        certification, MIT applied AI coursework, and Anthropic Architect certification building production
+        multi-agent systems.
+      </p>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-period">Nov 2022 to Jan 2024</div>
+      <p class="tl-role">General Manager · Neudesic (An IBM Company)</p>
+      <p class="tl-desc">
+        Owned a $50M P&amp;L end to end through post-acquisition integration into IBM. Launched an AI/ML product
+        line that generated $5M+ in new revenue and drove a 20% operating efficiency improvement in six months
+        while integrating a 300-person organization.
+      </p>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-period">Jan 2018 to Nov 2022</div>
+      <p class="tl-role">Head of Professional Services · Wolters Kluwer</p>
+      <p class="tl-desc">
+        Grew SaaS/PaaS revenue 15% annually for four consecutive years and led cloud modernization that cut
+        infrastructure cost 30% while maintaining 100% regulatory compliance for a regulated enterprise software
+        portfolio.
+      </p>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-period">Jan 2014 to Jan 2018</div>
+      <p class="tl-role">Director, Customer Experience &amp; Professional Services · Sterling Talent Solutions</p>
+      <p class="tl-desc">
+        Achieved 90% enterprise retention through IPO preparation and enhanced enterprise valuation 10% through
+        operational efficiency ahead of the IPO at this PE-backed company.
+      </p>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-period">Jan 2005 to Jan 2014</div>
+      <p class="tl-role">Product &amp; Operations Manager · Revenue Solutions Inc.</p>
+      <p class="tl-desc">
+        Launched multiple enterprise software products generating $80M+ in cumulative revenue and expanded the
+        served market from 3 to 15+ states for enterprise software serving state government.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="tinted">
+  <div class="inner">
+    <div class="contact-box">
+      <div>
+        <h2>Let's talk</h2>
+        <p>Open to conversations with recruiters, operators, and buyers evaluating portfolio companies or looking for revenue leadership.</p>
+      </div>
+      <div class="contact-actions">
+        <a class="btn btn-light" href="mailto:manish696@gmail.com">manish696@gmail.com</a>
+        <a class="btn btn-outline" href="https://linkedin.com/in/manish-agarwal-mani" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; <span id="year"></span> Manish · Chief Revenue Officer, Basis Vectors Capital
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
