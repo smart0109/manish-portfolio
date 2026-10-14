@@ -252,6 +252,23 @@
   footer{
     text-align:center; padding:36px 24px 48px; color:var(--ink-soft); font-size:12.5px;
   }
+
+  /* AI PRODUCTS (W67) */
+  .ai-groups{display:flex; flex-direction:column; gap:44px;}
+  .ai-group-head{display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; margin:0 0 18px; padding-bottom:10px; border-bottom:1px solid var(--line);}
+  .ai-group-num{font-size:12px; font-weight:800; color:var(--accent); letter-spacing:1px;}
+  .ai-group-title{font-size:19px; font-weight:800; color:var(--navy); margin:0;}
+  .ai-group-sub{font-size:13.5px; color:var(--ink-soft); margin:0;}
+  .ai-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:22px;}
+  .ai-grid.single{grid-template-columns:1fr;}
+  @media (max-width:800px){ .ai-grid{grid-template-columns:1fr;} }
+  .ai-stat{
+    display:inline-flex; align-items:center; gap:6px; align-self:flex-start; font-size:12.5px; font-weight:800; color:var(--navy);
+    background:var(--accent-soft); border-radius:8px; padding:6px 12px; margin:0 0 14px;
+  }
+  .ai-stat .dot{width:6px; height:6px; border-radius:50%; background:var(--accent);}
+  .ai-closing{margin:40px 0 0; font-size:14.5px; color:var(--ink-soft); border-left:3px solid var(--accent); padding:4px 0 4px 16px; max-width:760px;}
+  @media (max-width:720px){ .callout-bar{padding:18px 18px; font-size:14px;} .system-card{padding:22px 18px 20px;} }
 </style>
 </head>
 <body>
@@ -261,6 +278,7 @@
     <div class="brand">MANISH <span>/</span> CRO Portfolio</div>
     <nav class="links">
       <a href="#about">About</a>
+      <a href="#ai-products">AI Products</a>
       <a href="#systems">Systems Built</a>
       <a href="#technology">Technology</a>
       <a href="#ai-skills">AI Skills</a>
@@ -337,6 +355,221 @@
       </div>
     </div>
   </div>
+</section>
+
+<section id="ai-products">
+  <div class="section-head">
+    <p class="section-kicker">AI Products</p>
+    <h2 class="section-title">AI products I built</h2>
+    <p class="section-sub">Revenue leader who builds the AI his teams sell with: built a social selling engine, a viral post engine and an AI project management system for Cadient and Vorro, and turned his CRO copilot into the AI Associate product Vorro is launching.</p>
+  </div>
+
+  <div class="callout-bar">
+    <span>12% reply rate</span> on AI social selling &nbsp;·&nbsp; <span>300% impressions growth</span> from the viral post engine &nbsp;·&nbsp; AI project sites <span>live with clients</span>
+  </div>
+
+  <div class="ai-groups">
+  <div class="ai-group" id="ai-revenue">
+    <div class="ai-group-head">
+      <span class="ai-group-num">01</span>
+      <h3 class="ai-group-title">Revenue management AI</h3>
+      <p class="ai-group-sub">The AI Associate and the tools I run revenue with</p>
+    </div>
+    <div class="ai-grid">
+    <div class="system-card">
+      <div class="system-top">
+        <div class="system-icon" style="background:#c8862b;">AI</div>
+        <div>
+          <p class="system-name">Second Brain and the AI Associate</p>
+          <p class="system-sub">AI revenue management workspace</p>
+        </div>
+      </div>
+      <p class="system-desc">Shipped Second Brain in three months, a CRO copilot that pulls Gmail, Calendar, Drive, Zoho CRM and call transcripts into AI briefings, meeting prep and live deal tracking, with a live meeting coach and draft-only automations.</p>
+      <ul class="system-impact">
+        <li>Turned Second Brain into Vorro's AI Associate, an AI revenue management workspace (pipeline, deal tracking, meeting prep), and built its launch kit.</li>
+      </ul>
+      <div class="system-tags"><span class="system-tag">Gmail</span><span class="system-tag">Calendar</span><span class="system-tag">Drive</span><span class="system-tag">Zoho CRM</span><span class="system-tag">Call transcripts</span></div>
+    </div>
+    <div class="system-card">
+      <div class="system-top">
+        <div class="system-icon" style="background:#0e162d;">GA</div>
+        <div>
+          <p class="system-name">Go-to-market on automation</p>
+          <p class="system-sub">Scheduled AI agent workflows</p>
+        </div>
+      </div>
+      <p class="system-desc">Runs go-to-market for Cadient and Vorro on automation instead of headcount: an intent-first outreach engine, AI-built sales assets and scheduled AI agent workflows, with outreach drafted for human approval.</p>
+      <ul class="system-impact">
+        <li>Designed more than 20 scheduled AI agent workflows (meeting prep, CRM sync, follow-up drafting, visitor outreach, intent alerts), all outreach drafted for human approval.</li>
+      </ul>
+      <div class="system-tags"><span class="system-tag">Meeting prep</span><span class="system-tag">CRM sync</span><span class="system-tag">Intent alerts</span></div>
+    </div>
+    <div class="system-card">
+      <div class="system-top">
+        <div class="system-icon" style="background:#4a5468;">RF</div>
+        <div>
+          <p class="system-name">RFP framework</p>
+          <p class="system-sub">AI-assisted proposal drafting</p>
+        </div>
+      </div>
+      <p class="system-desc">Created Vorro's RFP framework with an AI-assisted drafting lane and answered an EHR-integration middleware RFP in about nine days, earning evaluation calls with the buyer's COO and advisors.</p>
+      <div class="system-tags"><span class="system-tag">Vorro</span><span class="system-tag">RFP</span></div>
+    </div>
+    </div>
+  </div>
+  <div class="ai-group" id="ai-delivery">
+    <div class="ai-group-head">
+      <span class="ai-group-num">02</span>
+      <h3 class="ai-group-title">AI project delivery</h3>
+      <p class="ai-group-sub">Client project sites and the hub that watches them</p>
+    </div>
+    <div class="ai-grid single">
+    <div class="system-card">
+      <div class="system-top">
+        <div class="system-icon" style="background:#0f9b8e;">PM</div>
+        <div>
+          <p class="system-name">AI project management system</p>
+          <p class="system-sub">Client project sites feeding one delivery hub</p>
+        </div>
+      </div>
+      <div class="ai-stat"><span class="dot"></span>Live with clients</div>
+      <p class="system-desc">Built an AI project management system for Vorro's client integrations in three days: each SOW becomes a client project site (plan, RAID log, approvals, change requests) feeding a hub that flags budget burn and slipping dates; live with clients.</p>
+      <ul class="system-impact">
+        <li>Scheduled AI jobs that read email and meeting notes, update project progress only from evidence and draft the Friday client update for approval</li>
+        <li>An owner-by-owner action board from the Vorro leadership chat.</li>
+      </ul>
+      <div class="system-tags"><span class="system-tag">SOW to project site</span><span class="system-tag">RAID log</span><span class="system-tag">Budget burn alerts</span><span class="system-tag">Friday client update</span></div>
+    </div>
+    </div>
+  </div>
+  <div class="ai-group" id="ai-outbound">
+    <div class="ai-group-head">
+      <span class="ai-group-num">03</span>
+      <h3 class="ai-group-title">AI outbound and sales assets</h3>
+      <p class="ai-group-sub">Finding buyers, opening the conversation, and the assets behind it</p>
+    </div>
+    <div class="ai-grid">
+    <div class="system-card">
+      <div class="system-top">
+        <div class="system-icon" style="background:#2952e3;">SS</div>
+        <div>
+          <p class="system-name">Social selling engine with intent signals</p>
+          <p class="system-sub">AI prospecting from live LinkedIn conversations</p>
+        </div>
+      </div>
+      <div class="ai-stat"><span class="dot"></span>12% reply rate</div>
+      <p class="system-desc">Built an AI social selling engine for Cadient and Vorro that finds buyers in live LinkedIn conversations, scores them against the ICP and writes personalized seven-touch LinkedIn and email sequences; 12% reply rate.</p>
+      <ul class="system-impact">
+        <li>Replaced list buying with intent signals: mined buyer comments on competitor and thought-leader LinkedIn posts and routed commenters into ICP scoring, so outreach opened on a conversation the buyer was already having.</li>
+      </ul>
+      <div class="system-tags"><span class="system-tag">LinkedIn</span><span class="system-tag">ICP scoring</span><span class="system-tag">Seven-touch sequences</span></div>
+    </div>
+    <div class="system-card">
+      <div class="system-top">
+        <div class="system-icon" style="background:#c8862b;">SA</div>
+        <div>
+          <p class="system-name">Sales pages, account pages and video library</p>
+          <p class="system-sub">AI-built sales assets</p>
+        </div>
+      </div>
+      <p class="system-desc">Built an AI collateral engine that researches, builds and publishes account-specific pages for hospitals, pharmacies, oncology practices and other segments, about 1,380 pages with a searchable directory, used in place of static collateral.</p>
+      <ul class="system-impact">
+        <li>Generated a personalized interactive sales page (ROI and battlecard) for each Cadient and Vorro prospect, and made a PDF one-pager the default when recipients were uneasy with downloaded HTML.</li>
+        <li>Stood up an AI video pipeline (script, synthetic voiceover, automated assembly) that produced Vorro's healthcare vertical video library and Cadient's 5 Minute Hire conference spot, embedded in prospect pages and outreach.</li>
+      </ul>
+      <div class="system-tags"><span class="system-tag">Account pages</span><span class="system-tag">ROI and battlecard</span><span class="system-tag">Video</span></div>
+    </div>
+    <div class="system-card">
+      <div class="system-top">
+        <div class="system-icon" style="background:#0f9b8e;">WV</div>
+        <div>
+          <p class="system-name">Website visitor outreach</p>
+          <p class="system-sub">Identified visitors to personal first touches</p>
+        </div>
+      </div>
+      <p class="system-desc">Built an AI pipeline for Vorro that turns identified website visitors into personal first touches (research, an industry page, a tailored email held for approval) with a CRM check that skips open deals and customers; more than half got a first touch within five weeks.</p>
+      <div class="system-tags"><span class="system-tag">Vorro</span><span class="system-tag">CRM check</span><span class="system-tag">Held for approval</span></div>
+    </div>
+    <div class="system-card">
+      <div class="system-top">
+        <div class="system-icon" style="background:#0e162d;">CG</div>
+        <div>
+          <p class="system-name">Outreach compliance gate</p>
+          <p class="system-sub">Hard checks before anything uploads</p>
+        </div>
+      </div>
+      <p class="system-desc">Put a hard compliance gate in front of every upload of AI-written outreach (customer-name protection, cross-brand checks, banned phrases, CAN-SPAM footer, suppression list) and regenerated messages to strip unverifiable claims.</p>
+      <div class="system-tags"><span class="system-tag">CAN-SPAM</span><span class="system-tag">Suppression list</span><span class="system-tag">Cross-brand checks</span></div>
+    </div>
+    </div>
+  </div>
+  <div class="ai-group" id="ai-marketing">
+    <div class="ai-group-head">
+      <span class="ai-group-num">04</span>
+      <h3 class="ai-group-title">Marketing intelligence</h3>
+      <p class="ai-group-sub">Signals, content and search visibility</p>
+    </div>
+    <div class="ai-grid">
+    <div class="system-card">
+      <div class="system-top">
+        <div class="system-icon" style="background:#d62598;">VP</div>
+        <div>
+          <p class="system-name">Viral post engine</p>
+          <p class="system-sub">AI content from posts breaking out in target markets</p>
+        </div>
+      </div>
+      <div class="ai-stat"><span class="dot"></span>300% impressions growth</div>
+      <p class="system-desc">Built an AI viral post engine that spots LinkedIn posts breaking out in target markets, scores virality and drafts comments, rewrites and images for rep approval; it produced Vorro's September content calendar and grew impressions 300%.</p>
+      <div class="system-tags"><span class="system-tag">LinkedIn</span><span class="system-tag">Content calendar</span><span class="system-tag">Rep approval</span></div>
+    </div>
+    <div class="system-card">
+      <div class="system-top">
+        <div class="system-icon" style="background:#2952e3;">BS</div>
+        <div>
+          <p class="system-name">Buying-signal monitor</p>
+          <p class="system-sub">Fresh signals into a scored digest</p>
+        </div>
+      </div>
+      <p class="system-desc">Automated buying-signal monitoring for Cadient and Vorro: scans of Reddit, Hacker News, LinkedIn posts, news and job postings that turn fresh signals into a scored digest, plus a pipeline treating HL7 and FHIR job posts as buying intent.</p>
+      <div class="system-tags"><span class="system-tag">Reddit</span><span class="system-tag">Hacker News</span><span class="system-tag">News</span><span class="system-tag">Job postings</span><span class="system-tag">HL7 and FHIR</span></div>
+    </div>
+    <div class="system-card">
+      <div class="system-top">
+        <div class="system-icon" style="background:#4a5468;">AV</div>
+        <div>
+          <p class="system-name">AI search visibility</p>
+          <p class="system-sub">Google AI Overviews and SEO console</p>
+        </div>
+      </div>
+      <p class="system-desc">Measured Vorro's visibility in Google AI Overviews (cited for 21% of non-branded buyer questions) and built a self-hosted SEO and AI visibility console that audits competitor pages and site speed and mines buyer questions.</p>
+      <div class="system-tags"><span class="system-tag">AI Overviews</span><span class="system-tag">SEO</span><span class="system-tag">Buyer questions</span></div>
+    </div>
+    </div>
+  </div>
+  <div class="ai-group" id="ai-healthcare">
+    <div class="ai-group-head">
+      <span class="ai-group-num">05</span>
+      <h3 class="ai-group-title">Healthcare AI</h3>
+      <p class="ai-group-sub">Applied AI in healthcare</p>
+    </div>
+    <div class="ai-grid single">
+    <div class="system-card">
+      <div class="system-top">
+        <div class="system-icon" style="background:#0f9b8e;">IM</div>
+        <div>
+          <p class="system-name">AI imaging project</p>
+          <p class="system-sub">Delivered for a physician client</p>
+        </div>
+      </div>
+      <div class="ai-stat"><span class="dot"></span>Processed 16x its scope</div>
+      <p class="system-desc">Delivered an AI imaging project for a physician client that processed 16x its scope, with hallucination testing and train, validation and test splits.</p>
+      <div class="system-tags"><span class="system-tag">Hallucination testing</span><span class="system-tag">Train, validation and test splits</span></div>
+    </div>
+    </div>
+  </div>
+  </div>
+
+  <p class="ai-closing">Launched an AI/ML product line at Neudesic (an IBM company) that opened a new revenue stream; now builds AI tools for Cadient and Vorro and rolls them out to the sales teams that use them.</p>
 </section>
 
 <section id="systems">
@@ -444,10 +677,6 @@
         <li>Designed the partner/integration ecosystem now mapped across the portfolio companies</li>
         <li>Built the process for sourcing, structuring, and activating strategic partnerships</li>
       </ul>
-      <div class="system-note">
-        Exact scope of the Amazon relationship pending final copy from Manish. Placeholder framing above;
-        update with specifics before wide distribution.
-      </div>
     </div>
 
     <div class="system-card">
@@ -578,9 +807,6 @@
     <div class="section-head">
       <p class="section-kicker">Portfolio Companies</p>
       <h2 class="section-title">What I've built and run</h2>
-      <p class="section-sub">
-        Product screenshots below are placeholders. Swap in real product screens whenever you're ready.
-      </p>
     </div>
     <div class="portfolio-grid">
 
@@ -593,7 +819,6 @@
             <p class="mockup-sub">AI-ranked candidates, live requisition board</p>
             <div class="mockup-bars"><div style="width:100%;"></div><div style="width:75%;"></div><div style="width:55%;"></div></div>
           </div>
-          <div class="mockup-badge">Screenshot Placeholder</div>
         </div>
         <div class="product-body">
           <p class="product-name">Cadient · SmartSuite / SmartHire</p>
@@ -616,7 +841,6 @@
             <p class="mockup-sub">Real-time healthcare data pipelines</p>
             <div class="mockup-bars"><div style="width:90%;"></div><div style="width:65%;"></div><div style="width:80%;"></div></div>
           </div>
-          <div class="mockup-badge">Screenshot Placeholder</div>
         </div>
         <div class="product-body">
           <p class="product-name">Vorro · BridgeGate EiPaaS</p>
@@ -639,7 +863,6 @@
             <p class="mockup-sub">Buying-intent and account scoring dashboard</p>
             <div class="mockup-bars"><div style="width:70%;"></div><div style="width:95%;"></div><div style="width:50%;"></div></div>
           </div>
-          <div class="mockup-badge">Screenshot Placeholder</div>
         </div>
         <div class="product-body">
           <p class="product-name">RevEngineer · RevEngineer.ai</p>
@@ -661,7 +884,6 @@
             <p class="mockup-sub">Order, catalog, and fulfillment console</p>
             <div class="mockup-bars"><div style="width:60%;"></div><div style="width:85%;"></div><div style="width:45%;"></div></div>
           </div>
-          <div class="mockup-badge">Screenshot Placeholder</div>
         </div>
         <div class="product-body">
           <p class="product-name">CV3 · CommerceV3</p>
@@ -691,7 +913,7 @@
       <p class="tl-role">Chief Revenue Officer · Basis Vectors Capital</p>
       <p class="tl-desc">
         Full operating ownership across four portfolio companies as a PE operating executive: marketing, sales,
-        GTM, product strategy, and turnaround, spanning $7.4M ARR, 65+ enterprise clients, and 217 employees.
+        GTM, product strategy, and turnaround.
         Doubled Cadient's EBITDA margin from 12% to 25% in under nine months and scaled Vorro 3x while holding a
         47% EBITDA margin.
       </p>
@@ -712,7 +934,7 @@
       <p class="tl-role">General Manager · Neudesic (An IBM Company)</p>
       <p class="tl-desc">
         Owned a $50M P&amp;L end to end through post-acquisition integration into IBM. Launched an AI/ML product
-        line that generated $5M+ in new revenue and drove a 20% operating efficiency improvement in six months
+        line that opened a new revenue stream and drove a 20% operating efficiency improvement in six months
         while integrating a 300-person organization.
       </p>
     </div>
